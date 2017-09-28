@@ -1,0 +1,19 @@
+<!--DOCTYPE html -->
+<html>
+
+<body>
+<h2>List of known buildings:</h2>
+<hr>
+{% for bldg in object_list %}
+
+    <h3>{{ bldg.BIN }}</h3><br>
+    {{ bldg.streetNumber }}<br>
+    {{ bldg.streetName }}<br>
+    Floors: {{ bldg.numFloors }}<br>
+    Roof Height: {{ bldg.roofHeight }}<br>
+    GPS: {{ bldg.bCenterLat }}, {{ bldg.bCenterLon }}<br>
+<br>
+
+{% endfor %}
+</body>
+</html>
